@@ -39,7 +39,7 @@ You can run MongoDB locally on your machine or you can sign up for a no-cost(!)
 account at `https://www.mongodb.com/`.
 
 Once you have your MongoDB instance set up, simply edit the login information
-that is found in `server/app.js` under the comment `// SETUP MONGO/MONGOOSE`.
+that is found in `server/models/db.js` under the comment `// SETUP MONGO/MONGOOSE`.
 
 For example, if you are using a local install you might set:
 
@@ -66,6 +66,8 @@ You might add the initial data used in the public MongoDB instance:
 > **NOTE**: you only want to review this section if you are going to create
 an entirely new project leveraging the same technologies and approach used for
 this project
+
+> **DOUBLE NOTE**: Tony manually modified this project since the creation, specifically removing the default index.js route, removing the jade view engine, and removing bin/www in lieu of a simpler use of server.js. If you follow the below steps you will end up with something that works but looks a bit different than what is checked in.
 
 Here are the command-line steps taken to create the initial version of this project:
 ```bash
