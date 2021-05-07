@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const mongoUser = 'dbReadOnlyUser';
 const mongoPasswd = 'jelly1234';
 const mongoDBName = 'MERN-STARTER-DB';

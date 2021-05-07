@@ -15,17 +15,19 @@ const SuperheroesTable = () => {
     }, []);
   
     return (
-      <div class="superhero-table">
+      <div className="superhero-table">
         <table>
             <tr><th>Name</th><th>Nickname</th><th>Alter Ego</th><th>Sidekick</th></tr>
-            {rows.map((row) => (
-                <tr key={row.name}>
-                    <td>{row.name}</td>
-                    <td>{row.nickname}</td>
-                    <td>{row.alterego}</td>
-                    <td>{row.sidekick}</td>
-                </tr>
-            ))}                
+            {rows.map((row) => {
+                return (
+                  <tr key={row.name}>
+                      <td>{row.name}</td>
+                      <td>{row.nickname}</td>
+                      <td>{row.alterego}</td>
+                      <td>{row.sidekick}</td>
+                  </tr>
+                )
+            })}                
         </table>
       </div>
     )
