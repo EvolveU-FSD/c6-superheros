@@ -13,6 +13,6 @@ const localMongoUrl = "mongodb://localhost:27017/c6Superheroes"
 mongoose.connect(localMongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once('open', (_) =>
-  console.log('MongoDB is now connected:', `${mongoUser}@${mongoServer}/${mongoDBName}`)
+  console.log('MongoDB is now connected:', localMongoUrl)
 );
 db.on('error', (err) => console.error('MongoDB connection error!', err));
