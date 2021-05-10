@@ -1,5 +1,6 @@
 import './App.css';
 import SuperheroesTable from './components/SuperheroesTable'
+import RegistrationForm from './components/RegistrationForm'
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
         <h1>Superhero Registry</h1>
       </div>
       <SuperheroesTable />
+      <RegistrationForm />
     </div>
   );
 };
