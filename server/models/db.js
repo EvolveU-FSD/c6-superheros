@@ -8,7 +8,9 @@ const url =
   `mongodb+srv://${mongoUser}:${mongoPasswd}` +
   `@${mongoServer}/${mongoDBName}?retryWrites=true&w=majority`;
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+const localMongoUrl = "mongodb://localhost:27017/c6Superheroes"
+
+mongoose.connect(localMongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once('open', (_) =>
   console.log('MongoDB is now connected:', `${mongoUser}@${mongoServer}/${mongoDBName}`)
