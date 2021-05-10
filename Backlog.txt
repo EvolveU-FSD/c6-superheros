@@ -1,0 +1,34 @@
+USER TYPE: SUPERHERO 
+- Registration form
+
+- Make an account
+-------RELEASE------
+
+- Make changes to their profile
+- Upload ID, documents
+- Personalize public profile
+- add / remove power
+- register personal assistant and give permission to make changes
+
+USER TYPE: AGENT
+* view list
+- Look at superhuman detail
+- create agent account
+- authenticate
+-------RELEASE------
+
+- Search/filter
+- edit a superhero?
+- suspend / block
+- delete erroneous superhero
+- add a new superhero?
+- comment on superhero - public or private?
+- assign ratings (danger rating)
+- update activities / sightings
+- assign cost to incidents!
+
+USER TYPE: PUBLIC
+- report incident
+- view public profile of superhero
+- rate superhero
+
