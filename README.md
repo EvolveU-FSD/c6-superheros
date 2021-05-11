@@ -13,7 +13,6 @@ This project also leverages a cloud-based instance of MongoDB for storing
 and retrieving data.
 
 # Working with this Codebase
-
 ## Starting the Express server
 
 In a command shell (CMD, PowerShell, Terminal, etc.) run the commands:
