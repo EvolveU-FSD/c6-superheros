@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
   try {
     let newSuperhero = new Superhero(superheroToCreate)
     await newSuperhero.save()
-    console.log("Created superhero", newSuperhero)
+    console.log("Created Superhero", newSuperhero)
     res.send(newSuperhero)  
   }
   catch (error) {
@@ -39,8 +39,33 @@ router.post('/', async (req, res) => {
 })
 
 /* Update a superhero by ID. */
+router.put('/:name', async function(req, res) {
+  let superheroToUpdate = req.body
+  try {
+    let data = await Superhero.findByIdAndUpdate(req.params.name, superheroToUpdate);
+    console.log("Updated Superhero", data)
+    res.send(data);
+  }
+  catch(error) {
+    console.log(error)
+    res.sendStatus(500)
+  }
+})
 
 /* Delete a superhero by ID. */
+router.delete("/:id", async (req, res) => {
+  try {
+    const data = await Superhero.findByIdAndDelete(req.params.id);
 
+    if (!data) {
+      res.sendStatus(404);
+    } else {
+      console.log("Deleted Superhero", data);
+      res.send(data);
+    }
+  } catch (error) {
+    console.log(error)
+    res.sendStatus(500)  }
+});
 
 module.exports = router;
