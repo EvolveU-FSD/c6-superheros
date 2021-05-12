@@ -40,19 +40,19 @@ const RegistrationForm = () => {
     return (
         <div>
             <div>
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
                 <input id="name" value={name} onChange={(event) => onInputChange(event,setName)}/>
             </div>
             <div>
-                <label for="nickname">Nickname</label>
+                <label htmlFor="nickname">Nickname</label>
                 <input id="nickname" value={nickname} onChange={(event) => onInputChange(event,setNickname)}/>
             </div>
             <div>
-                <label for="alterego">Alter ego</label>
+                <label htmlFor="alterego">Alter ego</label>
                 <input id="alterego" value={alterego} onChange={(event) => onInputChange(event,setAlterego)}/>
             </div>
             <div>
-                <label for="sidekick">Sidekick</label>
+                <label htmlFor="sidekick">Sidekick</label>
                 <input id="sidekick" value={sidekick} onChange={(event) => onInputChange(event,setSidekick)}/>
             </div>
             <button onClick={ onCreateClicked }>Create Superhero</button>
