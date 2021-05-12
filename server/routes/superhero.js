@@ -34,7 +34,12 @@ router.post('/', async (req, res) => {
   }
   catch (error) {
     console.log(error)
-    res.sendStatus(500)
+    if (error.code === 11000) {
+      res.status(409).send('Superhero ' + superheroToCreate.name + ' already exists');      
+    }
+    else {
+      res.sendStatus(500)
+    }
   }
 })
 
