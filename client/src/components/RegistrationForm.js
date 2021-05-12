@@ -37,6 +37,8 @@ const RegistrationForm = () => {
         setFunction(event.target.value);
     };
 
+    let createSuperheroDataInvalid = !name || (name.trim().length === 0)
+
     return (
         <div>
             <div>
@@ -55,7 +57,7 @@ const RegistrationForm = () => {
                 <label htmlFor="sidekick">Sidekick</label>
                 <input id="sidekick" value={sidekick} onChange={(event) => onInputChange(event,setSidekick)}/>
             </div>
-            <button onClick={ onCreateClicked }>Create Superhero</button>
+            <button disabled={ createSuperheroDataInvalid } onClick={ onCreateClicked }>Create Superhero</button>
         </div>
     )
 }
