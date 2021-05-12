@@ -6,6 +6,8 @@ const RegistrationForm = () => {
     let [alterego, setAlterego] = useState()
     let [sidekick, setSidekick] = useState()
 
+    let [createError, setCreateError] = useState()
+
     async function onCreateClicked() {
         console.log('Create has been clicked!')
         let superheroToCreate = {
@@ -25,6 +27,14 @@ const RegistrationForm = () => {
             })
             // the server didn't like the data for some reason
             console.log('Create response is', createResponse)
+            if (createResponse.status !== 200) {
+                let errorMessage = await createResponse.text()
+                console.log('We had an error.  it was: ', errorMessage)
+                setCreateError(errorMessage)
+            }
+            else {
+                setCreateError(undefined)
+            }
         }
         catch (error) {
             // the server cannot be reached
@@ -58,6 +68,7 @@ const RegistrationForm = () => {
                 <input id="sidekick" value={sidekick} onChange={(event) => onInputChange(event,setSidekick)}/>
             </div>
             <button disabled={ createSuperheroDataInvalid } onClick={ onCreateClicked }>Create Superhero</button>
+            { createError && <div>{createError}</div> }            
         </div>
     )
 }
