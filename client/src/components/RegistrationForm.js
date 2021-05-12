@@ -6,7 +6,7 @@ const RegistrationForm = () => {
     let [alterego, setAlterego] = useState()
     let [sidekick, setSidekick] = useState()
 
-    function onCreateClicked() {
+    async function onCreateClicked() {
         console.log('Create has been clicked!')
         let superheroToCreate = {
             name, 
@@ -15,6 +15,21 @@ const RegistrationForm = () => {
             sidekick
         }
         console.log('Creating superhero with', superheroToCreate )
+        try {
+            let createResponse = await fetch('/superhero', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(superheroToCreate)
+            })
+            // the server didn't like the data for some reason
+            console.log('Create response is', createResponse)
+        }
+        catch (error) {
+            // the server cannot be reached
+            console.error('Fetch failed to reach the server.')
+        }
     }
 
     const onInputChange = (event, setFunction) => {
