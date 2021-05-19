@@ -1,5 +1,5 @@
 USER TYPE: SUPERHERO 
-- Registration form
+* Registration form
 
 - Make an account
 -------RELEASE------
@@ -13,6 +13,7 @@ USER TYPE: SUPERHERO
 USER TYPE: AGENT
 * view list
 - Look at superhuman detail
+
 - edit a superhero
 
 - create agent account
