@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom";
 
-const RegistrationForm = () => {
+const RegistrationPage = () => {
     let [name, setName] = useState()
     let [nickname, setNickname] = useState()
     let [alterego, setAlterego] = useState()
@@ -78,4 +78,4 @@ const RegistrationForm = () => {
     )
 }
 
-export default RegistrationForm
+export default RegistrationPage

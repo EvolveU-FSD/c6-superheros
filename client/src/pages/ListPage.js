@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './SuperheroesTable.css';
+import './ListPage.css';
 
-const SuperheroesTable = () => {
+const ListPage = () => {
     const [rows, setRows] = useState([]);
   
     useEffect(() => {
@@ -35,4 +35,4 @@ const SuperheroesTable = () => {
     )
   }
 
-export default SuperheroesTable
+export default ListPage

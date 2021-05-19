@@ -7,8 +7,8 @@ import {
   Link
 } from "react-router-dom";
 
-import SuperheroesTable from './components/SuperheroesTable'
-import RegistrationForm from './components/RegistrationForm'
+import ListPage from './pages/ListPage'
+import RegistrationPage from './pages/RegistrationPage'
 
 const App = () => {
   return (
@@ -21,10 +21,10 @@ const App = () => {
         </div>
         <Switch>
           <Route path="/register">
-            <RegistrationForm />
+            <RegistrationPage />
           </Route>
           <Route path="/">
-            <SuperheroesTable />
+            <ListPage />
           </Route>          
         </Switch>
       </div>
