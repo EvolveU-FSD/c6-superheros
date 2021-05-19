@@ -13,12 +13,13 @@ USER TYPE: SUPERHERO
 USER TYPE: AGENT
 * view list
 - Look at superhuman detail
+- edit a superhero
+
 - create agent account
 - authenticate
 -------RELEASE------
 
 - Search/filter
-- edit a superhero?
 - suspend / block
 - delete erroneous superhero
 - add a new superhero?

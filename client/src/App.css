@@ -7,3 +7,8 @@
 .title-bar h1 {
   margin: 0px;
 }
+
+.title-bar a {
+  color: white;
+  margin-right: 1em;
+}

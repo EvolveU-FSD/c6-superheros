@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useHistory } from "react-router-dom";
 
 const RegistrationForm = () => {
     let [name, setName] = useState()
@@ -7,6 +8,8 @@ const RegistrationForm = () => {
     let [sidekick, setSidekick] = useState()
 
     let [createError, setCreateError] = useState()
+
+    let history = useHistory()
 
     async function onCreateClicked() {
         console.log('Create has been clicked!')
@@ -34,6 +37,8 @@ const RegistrationForm = () => {
             }
             else {
                 setCreateError(undefined)
+                // go back to the list view!
+                history.push("/")
             }
         }
         catch (error) {
