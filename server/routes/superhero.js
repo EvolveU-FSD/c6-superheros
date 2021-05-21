@@ -54,7 +54,7 @@ router.put('/:id', async function(req, res) {
   catch(error) {
     console.log(error)
     if (error.code === 11000) {
-      res.status(409).send('Superhero ' + superheroToCreate.name + ' already exists');      
+      res.status(409).send('Superhero ' + superheroToUpdate.name + ' already exists');      
     }
     else {
       res.sendStatus(500)

@@ -2,6 +2,7 @@ USER TYPE: SUPERHERO
 * Registration form
 
 - Make an account
+- edit my own superhero record
 -------RELEASE------
 
 - Make changes to their profile
@@ -16,7 +17,7 @@ USER TYPE: AGENT
 - edit a superhero
 
 - create agent account
-- authenticate
+- authenticate (can edit superheros)
 -------RELEASE------
 
 - Search/filter

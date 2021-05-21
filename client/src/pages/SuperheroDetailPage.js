@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import SuperheroDetail from '../components/SuperheroDetail'
 
@@ -8,6 +8,7 @@ const SuperheroDetailPage = () => {
         <div>
             <h2>Superhero Detail</h2>
             <SuperheroDetail superheroId={superheroId} />       
+            <Link to={`/superhero/${superheroId}/edit`}>Edit</Link>
         </div>
     )
 }

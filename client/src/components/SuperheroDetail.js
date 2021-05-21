@@ -16,7 +16,7 @@ const SuperheroDetail = ({ superheroId }) => {
         setSuperhero(data);
       };
       getSuperhero();
-  }, [superheroId])
+    }, [superheroId])
   
     return (
       <div>
