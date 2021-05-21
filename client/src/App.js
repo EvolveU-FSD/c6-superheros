@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import ListPage from './pages/ListPage'
+import SuperheroDetailPage from './pages/SuperheroDetailPage'
 import RegistrationPage from './pages/RegistrationPage'
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
         <Switch>
           <Route path="/register">
             <RegistrationPage />
+          </Route>
+          <Route path="/superhero/:superheroId">
+            <SuperheroDetailPage />
           </Route>
           <Route path="/">
             <ListPage />
