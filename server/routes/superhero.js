@@ -44,10 +44,10 @@ router.post('/', async (req, res) => {
 })
 
 /* Update a superhero by ID. */
-router.put('/:name', async function(req, res) {
+router.put('/:id', async function(req, res) {
   let superheroToUpdate = req.body
   try {
-    let data = await Superhero.findByIdAndUpdate(req.params.name, superheroToUpdate);
+    let data = await Superhero.findByIdAndUpdate(req.params.id, superheroToUpdate);
     console.log("Updated Superhero", data)
     res.send(data);
   }
