@@ -13,7 +13,7 @@ const LogInOrOut = () => {
             </div> 
             : 
             <div>
-                <button onClick={() => authContext.logIn('Spiderman', false)}>Login</button> 
+                <button onClick={() => authContext.logIn('Nick', true)}>Login</button> 
             </div>
 
 }

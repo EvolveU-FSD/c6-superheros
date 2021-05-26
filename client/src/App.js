@@ -13,6 +13,7 @@ import SuperheroEditPage from './pages/SuperheroEditPage'
 import RegistrationPage from './pages/RegistrationPage'
 import AuthenticationProvider from './AuthenticationProvider'
 import LogInOrOut from './components/LogInOrOut'
+import AgentOnly from './components/AgentOnly';
 
 const App = () => {
   return (
@@ -21,7 +22,9 @@ const App = () => {
         <div>
           <div className="title-bar">
             <h1>Superhero Registry</h1>
-            <Link to="/">List View</Link>
+            <AgentOnly>
+              <Link to="/">List View</Link>
+            </AgentOnly>
             <Link to="/register">Register</Link>
             <LogInOrOut />
           </div>
