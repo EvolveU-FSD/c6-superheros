@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import BlueBox from './BlueBox';
+import ColorEveryOtherChild from './ColorEveryOtherChild';
 
 const SuperheroDetail = ({ superheroId }) => {
     const [superhero, setSuperhero] = useState({

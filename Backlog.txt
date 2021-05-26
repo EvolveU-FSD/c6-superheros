@@ -14,7 +14,7 @@ USER TYPE: SUPERHERO
 USER TYPE: AGENT
 * view list
 * Look at superhuman detail
-- edit a superhero
+* edit a superhero
 
 - create agent account
 - authenticate (can edit superheros)
