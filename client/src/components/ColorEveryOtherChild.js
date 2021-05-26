@@ -8,7 +8,7 @@ const ColorEveryOtherChild = ({ children }) => {
     }
 
     const wrappedChildren = children.map((child, index) => {
-        if ((index % 2) == 0) {
+        if ((index % 2) === 0) {
             // even row
             return <div style={blueStyle}>{child}</div>
         }

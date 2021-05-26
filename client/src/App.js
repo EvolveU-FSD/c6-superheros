@@ -11,32 +11,37 @@ import ListPage from './pages/ListPage'
 import SuperheroDetailPage from './pages/SuperheroDetailPage'
 import SuperheroEditPage from './pages/SuperheroEditPage'
 import RegistrationPage from './pages/RegistrationPage'
+import AuthenticationProvider from './AuthenticationProvider'
+import LogInOrOut from './components/LogInOrOut'
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <div className="title-bar">
-          <h1>Superhero Registry</h1>
-          <Link to="/">List View</Link>
-          <Link to="/register">Register</Link>
+    <AuthenticationProvider>
+      <Router>
+        <div>
+          <div className="title-bar">
+            <h1>Superhero Registry</h1>
+            <Link to="/">List View</Link>
+            <Link to="/register">Register</Link>
+            <LogInOrOut />
+          </div>
+          <Switch>
+            <Route path="/register">
+              <RegistrationPage />
+            </Route>
+            <Route path="/superhero/:superheroId/edit">
+              <SuperheroEditPage />
+            </Route>
+            <Route path="/superhero/:superheroId">
+              <SuperheroDetailPage />
+            </Route>
+            <Route path="/">
+              <ListPage />
+            </Route>          
+          </Switch>
         </div>
-        <Switch>
-          <Route path="/register">
-            <RegistrationPage />
-          </Route>
-          <Route path="/superhero/:superheroId/edit">
-            <SuperheroEditPage />
-          </Route>
-          <Route path="/superhero/:superheroId">
-            <SuperheroDetailPage />
-          </Route>
-          <Route path="/">
-            <ListPage />
-          </Route>          
-        </Switch>
-      </div>
-    </Router>
+      </Router>
+    </AuthenticationProvider>
   );
 };
 
