@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // IMPORT ROUTES
-var superheroRouter = require('./routes/superhero');
+var apiRouter = require('./routes/apiRouter');
 
 var app = express();
 
@@ -15,11 +15,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // USE ROUTES
-app.use('/superhero', superheroRouter);
+app.use('/api', apiRouter);
 
 // serve the react application
 app.use(express.static('../client/build'))
 
+app.get('*', (req, res)=>{
+  res.sendFile(path.resolve(__dirname,'../client/build','index.html'))
+})
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

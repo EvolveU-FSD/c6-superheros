@@ -25,7 +25,7 @@ const SimpleTable = () => {
   useEffect(() => {
     const getSuperheroes = async () => {
       // fetch uses the "proxy" value set in client/package.json
-      let response = await fetch('/superhero');
+      let response = await fetch('/api/superhero');
       let data = await response.json();
       setRows(data);
     };

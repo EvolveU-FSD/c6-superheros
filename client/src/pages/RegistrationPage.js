@@ -10,7 +10,7 @@ const RegistrationPage = () => {
 
     let onSave = async function(updatedSuperhero) {
         try {
-            let createResponse = await fetch('/superhero', {
+            let createResponse = await fetch('/api/superhero', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

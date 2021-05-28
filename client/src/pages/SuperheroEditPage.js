@@ -14,7 +14,7 @@ const SuperheroEditPage = () => {
     useEffect(() => {
         const getSuperhero = async () => {
           // fetch uses the "proxy" value set in client/package.json
-          let response = await fetch('/superhero/'+superheroId);
+          let response = await fetch('/api/superhero/'+superheroId);
           let data = await response.json();
           setSuperhero(data);
         };
@@ -23,7 +23,7 @@ const SuperheroEditPage = () => {
   
     let onSave = async function(updatedSuperhero) {
         try {
-            let putResponse = await fetch('/superhero/'+superheroId, {
+            let putResponse = await fetch('/api/superhero/'+superheroId, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
