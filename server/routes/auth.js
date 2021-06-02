@@ -4,11 +4,11 @@ const User = require('../models/User');
 
 let router = express.Router();
 
-router.post('/login',
-  passport.authenticate('local'),
-  (req, res) => {
-      res.sendStatus(200)
-  }
+router.post('/login',   
+    passport.authenticate('local'),
+    (req, res) => {
+        res.json(req.user)
+    }
 );
 
 router.get('/loggedInUser', (req, res) => {
