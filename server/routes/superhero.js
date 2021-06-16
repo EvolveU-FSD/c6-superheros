@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const SuperheroHome = require('../models/SuperheroMongo');
+const SuperheroHome = require('../models/SuperheroSqlite');
 
 /* List all superheroes. */
 router.get('/', async (req, res) => {
