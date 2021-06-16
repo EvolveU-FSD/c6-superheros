@@ -64,15 +64,15 @@ async function update(id, superheroToUpdate) {
   " sidekick="+asSqlConstant(superheroToUpdate.sidekick)+
   "where id="+id
 
-console.log('Going to execute: ' + updateSql)
-return new Promise((resolve, reject) => {
-  db.run(updateSql, (err) => {
-    if (err) {
-      reject(err)
-    }
-    resolve()
+  console.log('Going to execute: ' + updateSql)
+  return new Promise((resolve, reject) => {
+    db.run(updateSql, (err) => {
+      if (err) {
+        reject(err)
+      }
+      resolve()
+    })
   })
-})
 
 }
 
