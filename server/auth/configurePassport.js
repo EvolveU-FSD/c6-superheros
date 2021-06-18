@@ -1,6 +1,6 @@
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
-const UserHome = require('../models/UserSqlite')
+const { UserHome } = require('../models')
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
