@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
 
 /* List one superhero by ID. */
 router.get('/:id', async function(req, res) {
-  
   try {
     const data = await SuperheroHome.findById(req.params.id);
     console.info(`Found Superhero:`, data)
