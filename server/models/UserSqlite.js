@@ -3,7 +3,7 @@ let db = require('./dbSqlite')
 async function findByUsername(username) { 
   console.log('Looking up username ', username)
   return new Promise((resolve, reject) => {
-    db.get('select id as _id, username, password, isAgent from user', (err, row) => {
+    db.get('select id as _id, username, password, isAgent from user where username="'+username+'"', (err, row) => {
       if (err) {
         reject(err)
       }
