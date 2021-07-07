@@ -36,10 +36,16 @@ async function deleteSuperhero(id) {
   return Superhero.findByIdAndDelete(id)
 }
 
+async function deleteAll() {
+  // throw and error if this is prod or qa...
+  return Superhero.deleteMany({})
+}
+
 module.exports = {
   findAll,
   findById,
   create,
   update,
-  deleteSuperhero
+  deleteSuperhero,
+  deleteAll
 }
