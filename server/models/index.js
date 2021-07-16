@@ -1,5 +1,5 @@
-let UserHome = require('./UserSqlite')
-let SuperheroHome = require('./SuperheroSqlite')
+let UserHome = require('./UserMongoose')
+let SuperheroHome = require('./SuperheroMongo')
 
 module.exports = {
     UserHome,
