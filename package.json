@@ -13,7 +13,10 @@
     "start-server": "cd server && npm start",
     "install": "npm run install-server && npm run install-client",
     "build": "npm run build-client",
-    "start": "npm run start-server"
+    "start": "npm run start-server",
+    "test-server": "cd server && npm run test && cd ..",
+    "test-client": "cd client && npm run test && cd ..",
+    "test": "echo run tests!"
   },
   "repository": {
     "type": "git",
